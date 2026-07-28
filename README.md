@@ -1,1 +1,1 @@
-# Luxe Magnate Core. .
+# Luxe Magnate Core.

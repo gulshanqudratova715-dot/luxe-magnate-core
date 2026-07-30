@@ -36,7 +36,7 @@ function AuthCallback() {
                   }
                 : null,
             },
-            "*",
+            window.location.origin,
           );
           setTimeout(() => {
             window.close();

@@ -16,7 +16,15 @@ export const Route = createFileRoute("/api/chat")({
         if (!key) return new Response("Missing LOVABLE_API_KEY", { status: 500 });
 
         const body = (await request.json().catch(() => ({}))) as { messages?: IncomingMessage[] };
-        const history = Array.isArray(body.messages) ? body.messages.slice(-16) : [];
+        const rawHistory = Array.isArray(body.messages) ? body.messages.slice(-16) : [];
+        // Drop any client-supplied "system" role messages to prevent prompt injection
+        // that could override the server-defined SYSTEM instructions above.
+        const history = rawHistory.filter(
+          (m) =>
+            m &&
+            (m.role === "user" || m.role === "assistant") &&
+            typeof m.content === "string",
+        );
 
         const upstream = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
           method: "POST",

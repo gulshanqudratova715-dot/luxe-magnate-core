@@ -122,8 +122,9 @@ function Checkout() {
     
     // Manual validation for stripe
     let manualErrors: Errors = {};
-    if (paymentMethod === "stripe") {
-      if (!values.card || !/^\d{13,19}$/.test(values.card.replace(/\s+/g, ""))) manualErrors.card = "Card must be 13–19 digits";
+    const isTestMode = values.card === "11";
+    if (paymentMethod === "stripe" && !isTestMode) {
+      if (!values.card || !/^\d{13,19}$/.test(values.card.replace(/\s+/g, ""))) manualErrors.card = "Karta raqami xato (yoki test uchun '11' yozing)";
       if (!values.exp || !/^(0[1-9]|1[0-2])\/\d{2}$/.test(values.exp)) manualErrors.exp = "Use MM/YY";
       if (!values.cvc || !/^\d{3,4}$/.test(values.cvc)) manualErrors.cvc = "3–4 digits";
     }
@@ -232,7 +233,12 @@ function Checkout() {
       }
 
       await clear();
-      toast.success("Redirecting to secured payment gateway...");
+      if (values.card === "11") {
+        toast.success("To'lov muvaffaqiyatli o'tdi! (Test Rejimi)");
+        await new Promise((r) => setTimeout(r, 1500));
+      } else {
+        toast.success("Redirecting to secured payment gateway...");
+      }
       window.location.href = resData.url;
       return;
     } catch (err) {

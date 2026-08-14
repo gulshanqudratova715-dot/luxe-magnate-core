@@ -4,7 +4,7 @@
 > This project is currently for sale. It is a fully-featured, premium e-commerce marketplace and AI concierge platform built with modern web technologies.
 > 
 > **Contact for inquiries:** [gulshanqudratova715@gmail.com](mailto:gulshanqudratova715@gmail.com)
-> **Asking Price:** $10,000
+> **Asking Price:** $20,000 
 
 Live   https://poetic-salmiakki-152759.netlify.app/
 

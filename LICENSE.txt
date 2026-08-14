@@ -1,0 +1,17 @@
+COMMERCIAL LICENSE AGREEMENT
+
+This Commercial License Agreement ("Agreement") grants the purchaser ("Licensee") the right to use, modify, and distribute the Luxe Magnate software ("Software").
+
+1. GRANT OF LICENSE
+Upon full payment of the purchase price, the original creator grants the Licensee a non-exclusive, worldwide, perpetual commercial license to use, modify, and integrate the Software into their own commercial products or services.
+
+2. RESTRICTIONS
+The Licensee may not resell, redistribute, or sub-license the source code of the Software as a standalone product. The Software must be incorporated into a larger project or service.
+
+3. OWNERSHIP
+The Licensee owns the rights to use the Software as outlined in this Agreement. The original creator retains the copyright to the original Software structure.
+
+4. NO WARRANTY
+The Software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability.
+
+By using this Software, you agree to these terms.

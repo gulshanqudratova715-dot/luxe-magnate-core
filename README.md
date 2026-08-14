@@ -6,7 +6,7 @@
 > **Contact for inquiries:** [gulshanqudratova715@gmail.com](mailto:gulshanqudratova715@gmail.com)
 > **Asking Price:** $10,000
 
-Live Demo: [https://sizning-saytingiz.vercel.app](https://sizning-saytingiz.vercel.app)
+Live   https://poetic-salmiakki-152759.netlify.app/
 
 ## UI Screenshots
 
